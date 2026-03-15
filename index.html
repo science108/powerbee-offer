@@ -35,6 +35,7 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         body {
@@ -706,6 +707,15 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .stat-card.round-size-card .subtitle {
+                white-space: normal;
+            }
+
+            .stat-card .value {
+                font-size: 1.3rem;
+                word-break: break-word;
+            }
+
             .vision-grid {
                 grid-template-columns: 1fr;
             }
@@ -714,6 +724,10 @@
         @media (max-width: 480px) {
             .stats-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .stat-card .value {
+                font-size: 1.2rem;
             }
         }
     </style>
