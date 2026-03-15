@@ -1127,18 +1127,23 @@
             <div class="section-label">Get In Touch</div>
             <h2 class="section-title">Interested in Partnering?</h2>
             <div class="divider"></div>
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/radek.wasikiewicz@powerbee.tech" method="POST">
+                <input type="hidden" name="_subject" value="PowerBee Angel Investment — New Inquiry">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://science108.github.io/powerbee-offer/?sent=1">
+                <input type="text" name="_honey" style="display:none">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Your name" required>
+                    <input type="text" name="Name" id="name" placeholder="Your name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="your@email.com" required>
+                    <input type="email" name="Email" id="email" placeholder="your@email.com" required>
                 </div>
                 <div class="form-group">
                     <label for="interest">Investment Interest</label>
-                    <select id="interest">
+                    <select name="Investment Interest" id="interest">
                         <option value="€10,000">€10,000</option>
                         <option value="€25,000" selected>€25,000</option>
                         <option value="€50,000">€50,000</option>
@@ -1149,9 +1154,9 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message (optional)</label>
-                    <textarea id="message" placeholder="Any questions or comments..."></textarea>
+                    <textarea name="Message" id="message" placeholder="Any questions or comments..."></textarea>
                 </div>
-                <button type="submit" class="btn-submit">Send via Email &#x2192;</button>
+                <button type="submit" class="btn-submit">Send Message &#x2192;</button>
             </form>
         </div>
     </section>
@@ -1175,30 +1180,14 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const interest = document.getElementById('interest').value;
-            const message = document.getElementById('message').value.trim();
-
-            const subject = 'PowerBee Angel Investment — Interest from ' + name;
-            const body = 'Dear PowerBee Team,\n\n'
-                + 'I am interested in the PowerBee Pre-Seed investment round.\n\n'
-                + 'Name: ' + name + '\n'
-                + 'Email: ' + email + '\n'
-                + 'Investment interest: ' + interest + '\n'
-                + (message ? '\nMessage:\n' + message + '\n' : '')
-                + '\nI would like to schedule a call to discuss the opportunity further.\n\n'
-                + 'Best regards,\n'
-                + name;
-
-            const mailto = 'mailto:radek.wasikiewicz@powerbee.tech'
-                + '?subject=' + encodeURIComponent(subject)
-                + '&body=' + encodeURIComponent(body);
-
-            window.location.href = mailto;
-        });
+        if (window.location.search.includes('sent=1')) {
+            const form = document.getElementById('contactForm');
+            form.innerHTML = '<div style="text-align:center;padding:48px 0;">'
+                + '<div style="font-size:2.5rem;margin-bottom:16px;">&#x2705;</div>'
+                + '<h3 style="color:#fff;margin-bottom:12px;">Message Sent!</h3>'
+                + '<p style="color:var(--text-dim);">Thank you for your interest. We\'ll get back to you shortly.</p>'
+                + '</div>';
+        }
     </script>
 </body>
 </html>
