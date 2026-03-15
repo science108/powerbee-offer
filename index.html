@@ -287,6 +287,15 @@
             text-shadow: 0 0 20px rgba(224, 64, 251, 0.4);
         }
 
+        .stat-card.round-size-card {
+            grid-column: 1 / -1;
+        }
+
+        .stat-card.round-size-card .subtitle {
+            font-size: 0.8rem;
+            white-space: nowrap;
+        }
+
         .stat-card.opportunity-card {
             grid-column: 1 / -1;
             border-color: rgba(224, 64, 251, 0.4);
@@ -749,7 +758,7 @@
                     <div class="value">10M</div>
                     <div class="subtitle">1M for this round</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card round-size-card">
                     <div class="label">Round Size</div>
                     <div class="value">&euro;350k</div>
                     <div class="subtitle">&euro;100k closed (pre-patenting) &mdash; 400k shares<br>&euro;250k open (EU grant) &mdash; 600k shares</div>
