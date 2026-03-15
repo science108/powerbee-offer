@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerBee — Angel Investment Offer</title>
+    <meta name="description" content="Revolutionizing Clean Energy with the World's Most Efficient Mini Power Generator. Angel Investment Opportunity.">
+    <meta property="og:title" content="PowerBee — Angel Investment Offer">
+    <meta property="og:description" content="Revolutionizing Clean Energy with the World's Most Efficient Mini Power Generator">
+    <meta property="og:image" content="assets/hero.png">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --neon: #e040fb;
+            --neon-bright: #ff50ff;
+            --neon-dim: #b030d0;
+            --bg: #07060b;
+            --bg-card: rgba(255, 255, 255, 0.04);
+            --bg-card-hover: rgba(255, 255, 255, 0.07);
+            --text: #e8e6f0;
+            --text-dim: #9a96a8;
+            --border: rgba(224, 64, 251, 0.15);
+            --glow: 0 0 20px rgba(224, 64, 251, 0.3), 0 0 60px rgba(224, 64, 251, 0.1);
+            --glow-strong: 0 0 20px rgba(224, 64, 251, 0.5), 0 0 80px rgba(224, 64, 251, 0.2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(224, 64, 251, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(224, 64, 251, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 18px 0;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(7, 6, 11, 0.7);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(224, 64, 251, 0.5);
+        }
+
+        .nav-tag {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            border: 1px solid var(--border);
+            padding: 6px 16px;
+            border-radius: 100px;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 24px 80px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(224, 64, 251, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            margin-bottom: 48px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 40px;
+            background: radial-gradient(ellipse, rgba(224, 64, 251, 0.3) 0%, transparent 70%);
+            filter: blur(10px);
+        }
+
+        .hero-image {
+            width: min(500px, 85vw);
+            border-radius: 20px;
+            box-shadow: var(--glow-strong);
+            border: 1px solid rgba(224, 64, 251, 0.2);
+        }
+
+        .hero h1 {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            font-weight: 300;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--neon);
+            text-shadow: 0 0 30px rgba(224, 64, 251, 0.4);
+            margin-bottom: 16px;
+        }
+
+        .hero .slogan {
+            font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.25;
+            max-width: 800px;
+            margin-bottom: 32px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--neon-bright) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .opportunity {
+            font-size: 1.05rem;
+            color: var(--text-dim);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .hero .opportunity strong {
+            color: var(--neon);
+            font-weight: 600;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--neon);
+            text-shadow: 0 0 20px rgba(224, 64, 251, 0.3);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 700;
+            margin-bottom: 48px;
+            line-height: 1.2;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: var(--neon);
+            box-shadow: 0 0 10px var(--neon);
+            margin-bottom: 48px;
+        }
+
+        /* ── STAT CARDS (Round Snapshot) ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 24px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(224, 64, 251, 0.3);
+            box-shadow: var(--glow);
+            transform: translateY(-4px);
+        }
+
+        .stat-card .label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-dim);
+            margin-bottom: 8px;
+        }
+
+        .stat-card .value {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(224, 64, 251, 0.2);
+        }
+
+        .stat-card .value .unit {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-dim);
+        }
+
+        .stat-card .subtitle {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--text-dim);
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        .stat-card.highlight {
+            border-color: rgba(224, 64, 251, 0.35);
+            background: rgba(224, 64, 251, 0.06);
+        }
+
+        .stat-card.highlight .value {
+            color: var(--neon-bright);
+            text-shadow: 0 0 20px rgba(224, 64, 251, 0.4);
+        }
+
+        .stat-card.opportunity-card {
+            grid-column: 1 / -1;
+            border-color: rgba(224, 64, 251, 0.4);
+            background: linear-gradient(135deg, rgba(224, 64, 251, 0.08) 0%, rgba(176, 48, 208, 0.03) 100%);
+            box-shadow: var(--glow);
+        }
+
+        /* ── USE CASES ── */
+        .usecase-hero {
+            background: linear-gradient(135deg, rgba(224, 64, 251, 0.1) 0%, rgba(176, 48, 208, 0.04) 100%);
+            border: 1px solid rgba(224, 64, 251, 0.25);
+            border-radius: 20px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: var(--glow);
+            margin-bottom: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .usecase-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at top, rgba(224, 64, 251, 0.06), transparent 60%);
+            pointer-events: none;
+        }
+
+        .usecase-hero p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            color: var(--text);
+        }
+
+        .usecase-hero strong {
+            color: var(--neon-bright);
+            font-weight: 700;
+        }
+
+        .usecase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .usecase-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 24px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .usecase-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(224, 64, 251, 0.3);
+            box-shadow: var(--glow);
+            transform: translateY(-4px);
+        }
+
+        .usecase-icon {
+            font-size: 2.2rem;
+            margin-bottom: 14px;
+            filter: drop-shadow(0 0 8px rgba(224, 64, 251, 0.4));
+        }
+
+        .usecase-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .usecase-card p {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        /* ── INVESTMENT TABLE ── */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        thead th {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            padding: 18px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+
+        tbody td {
+            padding: 20px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            font-size: 0.95rem;
+            font-variant-numeric: tabular-nums;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: rgba(224, 64, 251, 0.04);
+        }
+
+        .col-option {
+            font-weight: 600;
+            color: var(--neon);
+        }
+
+        .col-highlight {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .col-return {
+            color: var(--neon-bright);
+            font-weight: 700;
+            text-shadow: 0 0 12px rgba(224, 64, 251, 0.3);
+        }
+
+        .bonus-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--neon);
+            background: rgba(224, 64, 251, 0.12);
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-left: 6px;
+        }
+
+        /* ── WHY INVEST ── */
+        .reasons-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .reason-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .reason-item:hover {
+            border-color: rgba(224, 64, 251, 0.3);
+            background: var(--bg-card-hover);
+            transform: translateX(6px);
+        }
+
+        .reason-icon {
+            flex-shrink: 0;
+            width: 10px;
+            height: 10px;
+            margin-top: 8px;
+            border-radius: 50%;
+            background: var(--neon);
+            box-shadow: 0 0 10px var(--neon), 0 0 20px rgba(224, 64, 251, 0.3);
+        }
+
+        .reason-item p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        /* ── ROI CALLOUT ── */
+        .roi-callout {
+            background: linear-gradient(135deg, rgba(224, 64, 251, 0.1) 0%, rgba(176, 48, 208, 0.05) 100%);
+            border: 1px solid rgba(224, 64, 251, 0.3);
+            border-radius: 20px;
+            padding: 48px;
+            text-align: center;
+            box-shadow: var(--glow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .roi-callout::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at top, rgba(224, 64, 251, 0.08), transparent 60%);
+            pointer-events: none;
+        }
+
+        .roi-callout .roi-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 36px;
+            position: relative;
+        }
+
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            position: relative;
+        }
+
+        .roi-item .roi-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            margin-bottom: 6px;
+        }
+
+        .roi-item .roi-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--neon-bright);
+            text-shadow: 0 0 25px rgba(224, 64, 251, 0.5);
+        }
+
+        .roi-item .roi-value.white {
+            color: #fff;
+            text-shadow: none;
+        }
+
+        .roi-item .roi-value .unit {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-dim);
+        }
+
+        .roi-note {
+            margin-top: 32px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--neon);
+            font-weight: 500;
+            text-shadow: 0 0 20px rgba(224, 64, 251, 0.3);
+            position: relative;
+        }
+
+        /* ── VISION / PHILOSOPHY ── */
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .vision-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .vision-card:hover {
+            border-color: rgba(224, 64, 251, 0.3);
+            box-shadow: var(--glow);
+            transform: translateY(-4px);
+        }
+
+        .vision-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: #fff;
+        }
+
+        .vision-card p,
+        .vision-card li {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .vision-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .vision-card ul li {
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .vision-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--neon);
+            box-shadow: 0 0 6px var(--neon);
+        }
+
+        /* ── PHILOSOPHY ── */
+        .philosophy-list {
+            display: grid;
+            gap: 16px;
+            max-width: 700px;
+        }
+
+        .philosophy-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .philosophy-item .dash {
+            color: var(--neon);
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.3;
+            flex-shrink: 0;
+            text-shadow: 0 0 10px rgba(224, 64, 251, 0.4);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 700px;
+            opacity: 0.7;
+        }
+
+        footer .footer-brand {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--neon);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            text-shadow: 0 0 15px rgba(224, 64, 251, 0.3);
+        }
+
+        /* ── FADE-IN ANIMATIONS ── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            section {
+                padding: 64px 0;
+            }
+
+            .roi-callout {
+                padding: 32px 20px;
+            }
+
+            .roi-item .roi-value {
+                font-size: 1.4rem;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">PowerBee</div>
+            <div class="nav-tag">Angel Investment Offer</div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-image-wrapper">
+            <img class="hero-image" src="assets/hero.png" alt="PowerBee Mini Power Generator">
+        </div>
+        <h1>PowerBee Angel Investment Offer</h1>
+        <p class="slogan">Revolutionizing Clean Energy with the World's Most Efficient Mini Power Generator</p>
+        <p class="opportunity">Round tied to <strong>&euro;1M EU grant</strong> (PARP Smart Path / FENG) &mdash; &euro;250k equity raise is the co-financing requirement. Submission deadline: <strong>March 31, 2025</strong></p>
+    </section>
+
+    <!-- ROUND SNAPSHOT -->
+    <section id="snapshot">
+        <div class="container fade-in">
+            <div class="section-label">Round Snapshot</div>
+            <h2 class="section-title">Pre-Seed Investment Round</h2>
+            <div class="divider"></div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">Pre-Money Valuation</div>
+                    <div class="value">&euro;5.25M</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Price per Share</div>
+                    <div class="value">&euro;0.50</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Total Round</div>
+                    <div class="value">&euro;375k</div>
+                    <div class="subtitle">&euro;125k closed + &euro;250k open</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Early-Bird Tranche (CLOSED)</div>
+                    <div class="value">&euro;125k</div>
+                    <div class="subtitle">100% bonus &mdash; pre-patent risk reward</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="label">Available Now</div>
+                    <div class="value">&euro;250k</div>
+                    <div class="subtitle">10% bonus</div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Total Shares</div>
+                    <div class="value">10.5M</div>
+                    <div class="subtitle">after early-bird tranche</div>
+                </div>
+                <div class="stat-card highlight">
+                    <div class="label">Shares Available</div>
+                    <div class="value">550,000</div>
+                    <div class="subtitle">Including 10% bonus</div>
+                </div>
+                <div class="stat-card opportunity-card">
+                    <div class="label">Opportunity</div>
+                    <div class="value">EU Grant &euro;1M</div>
+                    <div class="subtitle">Round tied to PARP Smart Path / FENG</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTMENT OPTIONS -->
+    <section id="options">
+        <div class="container fade-in">
+            <div class="section-label">Investment Options</div>
+            <h2 class="section-title">Current Tranche &mdash; 10% Bonus</h2>
+            <div class="divider"></div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Investment</th>
+                            <th>Base Shares</th>
+                            <th>Bonus Shares</th>
+                            <th>Total Shares</th>
+                            <th>Value @&euro;1B</th>
+                            <th>~Return*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-option">1</td>
+                            <td class="col-highlight">&euro;10,000</td>
+                            <td>20,000</td>
+                            <td>+2,000 <span class="bonus-tag">10%</span></td>
+                            <td class="col-highlight">22,000</td>
+                            <td>&euro;2.0M</td>
+                            <td class="col-return">~199x</td>
+                        </tr>
+                        <tr>
+                            <td class="col-option">2</td>
+                            <td class="col-highlight">&euro;25,000</td>
+                            <td>50,000</td>
+                            <td>+5,000 <span class="bonus-tag">10%</span></td>
+                            <td class="col-highlight">55,000</td>
+                            <td>&euro;5.0M</td>
+                            <td class="col-return">~199x</td>
+                        </tr>
+                        <tr>
+                            <td class="col-option">3</td>
+                            <td class="col-highlight">&euro;50,000</td>
+                            <td>100,000</td>
+                            <td>+10,000 <span class="bonus-tag">10%</span></td>
+                            <td class="col-highlight">110,000</td>
+                            <td>&euro;10.0M</td>
+                            <td class="col-return">~199x</td>
+                        </tr>
+                        <tr>
+                            <td class="col-option">4</td>
+                            <td class="col-highlight">&euro;125,000</td>
+                            <td>250,000</td>
+                            <td>+25,000 <span class="bonus-tag">10%</span></td>
+                            <td class="col-highlight">275,000</td>
+                            <td>&euro;24.9M</td>
+                            <td class="col-return">~199x</td>
+                        </tr>
+                        <tr>
+                            <td class="col-option">5</td>
+                            <td class="col-highlight">&euro;250,000</td>
+                            <td>500,000</td>
+                            <td>+50,000 <span class="bonus-tag">10%</span></td>
+                            <td class="col-highlight">550,000</td>
+                            <td>&euro;49.8M</td>
+                            <td class="col-return">~199x</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY NOW — EU GRANT OPPORTUNITY -->
+    <section id="why">
+        <div class="container fade-in">
+            <div class="section-label">Why Now?</div>
+            <h2 class="section-title">EU Grant Opportunity</h2>
+            <div class="divider"></div>
+            <div class="reasons-list">
+                <div class="reason-item">
+                    <div class="reason-icon"></div>
+                    <p>PowerBee has qualified for a &euro;1M non-dilutive EU grant (PARP Smart Path / FENG program) for RCPM R&amp;D</p>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon"></div>
+                    <p>A professional grant consultant with a proven track record is being engaged</p>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon"></div>
+                    <p>Grant covers 2.5+ years of full R&amp;D and operations &mdash; your equity goes further</p>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon"></div>
+                    <p>Patent applications submitted July 2025 (200+ pages of innovation)</p>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon"></div>
+                    <p>Unique IP: Hybrid of Wankel &amp; piston engines, solving legacy rotary flaws</p>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon"></div>
+                    <p>Tiny engine, massive applications: drones, mobility, power tools, aviation</p>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon"></div>
+                    <p>Committed, mission-driven founding team</p>
+                </div>
+                <div class="reason-item">
+                    <div class="reason-icon"></div>
+                    <p>Clear roadmap: &euro;25M next round (2027) &rarr; &euro;1B potential by 2030</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI EXAMPLE -->
+    <section id="roi">
+        <div class="container fade-in">
+            <div class="roi-callout">
+                <h2 class="roi-title">Angel Investor ROI Example*</h2>
+                <div class="roi-grid">
+                    <div class="roi-item">
+                        <div class="roi-label">Investment</div>
+                        <div class="roi-value white">&euro;25k</div>
+                    </div>
+                    <div class="roi-item">
+                        <div class="roi-label">Shares @ &euro;0.50</div>
+                        <div class="roi-value white">55,000</div>
+                    </div>
+                    <div class="roi-item">
+                        <div class="roi-label">At &euro;1B Valuation (2030)</div>
+                        <div class="roi-value">&euro;5.0M</div>
+                    </div>
+                    <div class="roi-item">
+                        <div class="roi-label">Return Multiple</div>
+                        <div class="roi-value">~199x*</div>
+                    </div>
+                    <div class="roi-item">
+                        <div class="roi-label">Implied Share Price</div>
+                        <div class="roi-value">&euro;90.50<span class="unit">/share</span></div>
+                    </div>
+                </div>
+                <p class="roi-note">Your investment directly unlocks &euro;1M in non-dilutive EU funding &mdash; multiplying the effective capital deployed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGIC VISION -->
+    <section id="vision">
+        <div class="container fade-in">
+            <div class="section-label">Strategic Vision</div>
+            <h2 class="section-title">Where We're Headed</h2>
+            <div class="divider"></div>
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <h3>PowerBee Core</h3>
+                    <p>Ultra-efficient micro generator &rarr; exponential markets</p>
+                </div>
+                <div class="vision-card">
+                    <h3>Future Horizons</h3>
+                    <ul>
+                        <li>Drone &amp; flying applications</li>
+                        <li>Viman Creations</li>
+                        <li>Skywilders</li>
+                        <li>Viman Aviation</li>
+                    </ul>
+                </div>
+                <div class="vision-card">
+                    <h3>Ethics-First</h3>
+                    <p>No military use; only sustainable, life-enhancing purposes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOUNDER'S PHILOSOPHY -->
+    <section id="philosophy">
+        <div class="container fade-in">
+            <div class="section-label">Founder's Philosophy</div>
+            <h2 class="section-title">Mission-Driven Innovation</h2>
+            <div class="divider"></div>
+            <div class="philosophy-list">
+                <div class="philosophy-item">
+                    <span class="dash">&mdash;</span>
+                    <p>Technology to liberate, not exploit</p>
+                </div>
+                <div class="philosophy-item">
+                    <span class="dash">&mdash;</span>
+                    <p>Seeking mission-aligned co-creators, not just capital</p>
+                </div>
+                <div class="philosophy-item">
+                    <span class="dash">&mdash;</span>
+                    <p>Founder aims to retain 51% voting rights for vision stewardship</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT IS POWERBEE -->
+    <section id="usecases">
+        <div class="container fade-in">
+            <div class="section-label">What Is PowerBee?</div>
+            <h2 class="section-title">Imagine the Power</h2>
+            <div class="divider"></div>
+            <div class="usecase-hero">
+                <p>One liter of biofuel, hydrogen, or e-fuel &mdash; <strong>more energy output than a wall of lithium batteries.</strong> PowerBee is a pocket-sized rotary generator that turns tiny amounts of fuel into massive, clean power.</p>
+            </div>
+            <div class="usecase-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">&#x1F690;</div>
+                    <h3>Campervans &amp; RVs</h3>
+                    <p>Full off-grid power from a device that fits in your hand</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">&#x1F3E0;</div>
+                    <h3>Off-Grid Homes</h3>
+                    <p>Silent, efficient home energy &mdash; no solar panel arrays needed</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">&#x1F681;</div>
+                    <h3>Drones &amp; UAVs</h3>
+                    <p>10x flight time vs battery-only &mdash; unlock long-range missions</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">&#x1F527;</div>
+                    <h3>Power Tools &amp; Jobsites</h3>
+                    <p>Portable, fuel-sipping generator replaces heavy equipment</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">&#x2708;&#xFE0F;</div>
+                    <h3>Aviation &amp; eVTOL</h3>
+                    <p>Lightweight range extender for next-gen aircraft</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">&#x26A1;</div>
+                    <h3>Emergency &amp; Rescue</h3>
+                    <p>Reliable backup power anywhere, anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand">PowerBee</div>
+            <p>*This ROI projection is illustrative and does not constitute a guarantee. Future rounds may involve dilution, preference structures, or other terms as agreed with investors at that time.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
